@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <changeSet id="create-customers" author="tkambarov">
+        <createTable tableName="customers">
+            <column name="id" type="bigint" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="first_name" type="varchar(255)"/>
+            <column name="last_name" type="varchar(255)"/>
+            <column name="middle_name" type="varchar(255)"/>
+            <column name="phone" type="varchar(20)">
+                <constraints unique="true"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="create-vehicles" author="tkambarov">
+        <createTable tableName="vehicles">
+            <column name="id" type="bigint" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="make" type="varchar(255)"/>
+            <column name="model" type="varchar(255)"/>
+            <column name="year" type="int"/>
+            <column name="vin" type="varchar(50)"/>
+            <column name="mileage" type="int"/>
+            <column name="license_plate" type="varchar(50)">
+                <constraints unique="true"/>
+            </column>
+            <column name="engine_type" type="varchar(255)"/>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="create-bids" author="tkambarov">
+        <createTable tableName="bids">
+            <column name="id" type="bigint" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="customer_id" type="bigint">
+                <constraints foreignKeyName="fk_bids_customers" references="customers(id)" nullable="false"/>
+            </column>
+            <column name="vehicle_id" type="bigint">
+                <constraints foreignKeyName="fk_bids_vehicles" references="vehicles(id)" nullable="false"/>
+            </column>
+            <column name="sent_for_repair" type="boolean" defaultValueBoolean="false">
+                <constraints nullable="false"/>
+            </column>
+            <column name="complaint" type="text"/>
+            <column name="created_dt" type="timestamp"/>
+            <column name="preferred_dt" type="date"/>
+            <column name="notes" type="text"/>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="create-attachments" author="tkambarov">
+        <createTable tableName="attachments">
+            <column name="id" type="bigint" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="file_name" type="varchar(255)"/>
+            <column name="file_type" type="varchar(255)"/>
+            <column name="url" type="varchar(500)"/>
+            <column name="bid_id" type="bigint">
+                <constraints foreignKeyName="fk_attachments_bids" references="bids(id)" nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+</databaseChangeLog>

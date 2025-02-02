@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <changeSet id="create-customers" author="tkambarov">
+        <createTable tableName="customers">
+            <column name="id" type="bigint">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="first_name" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="last_name" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="middle_name" type="varchar(255)"/>
+            <column name="phone" type="varchar(20)">
+                <constraints unique="true" nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="create-vehicles" author="tkambarov">
+        <createTable tableName="vehicles">
+            <column name="id" type="bigint">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="make" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="model" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="year" type="int">
+                <constraints nullable="false"/>
+            </column>
+            <column name="vin" type="varchar(50)"/>
+            <column name="mileage" type="int"/>
+            <column name="license_plate" type="varchar(50)">
+                <constraints unique="true" nullable="false"/>
+            </column>
+            <column name="engine_type" type="varchar(255)"/>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="create-issue-codes" author="tkambarov">
+        <createTable tableName="issue_codes">
+            <column name="code" type="varchar(255)">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="description" type="varchar(255)"/>
+            <column name="repair_time_in_hours" type="NUMERIC(12,6)"/>
+            <column name="price" type="NUMERIC(12,2)"/>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="create-bids" author="tkambarov">
+        <createTable tableName="bids">
+            <column name="id" type="bigint">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="customer_id" type="bigint">
+                <constraints foreignKeyName="fk_bids_customers" references="customers(id)" nullable="false"/>
+            </column>
+            <column name="vehicle_id" type="bigint">
+                <constraints foreignKeyName="fk_bids_vehicles" references="vehicles(id)" nullable="false"/>
+            </column>
+            <column name="status" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="complaint" type="text">
+                <constraints nullable="false"/>
+            </column>
+            <column name="created_dt" type="timestamp">
+                <constraints nullable="false"/>
+            </column>
+            <column name="preferred_dt" type="date"/>
+            <column name="estimated_repair_dt" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="repair_received_dt" type="timestamp">
+                <constraints nullable="false"/>
+            </column>
+            <column name="repair_finished_dt" type="timestamp"/>
+            <column name="notes" type="text"/>
+            <column name="total_price" type="NUMERIC(12,2)"/>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="create-bid-issue-codes" author="tkambarov">
+        <createTable tableName="bid_issue_codes">
+            <column name="bid_id" type="bigint">
+                <constraints nullable="false"/>
+            </column>
+            <column name="issue_code" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="add-fk-constraints-bid-issue-codes" author="tkambarov">
+        <addForeignKeyConstraint
+                baseTableName="bid_issue_codes"
+                baseColumnNames="bid_id"
+                referencedTableName="bids"
+                referencedColumnNames="id"
+                constraintName="fk_bid_issue_codes_bid" />
+        <addForeignKeyConstraint
+                baseTableName="bid_issue_codes"
+                baseColumnNames="issue_code"
+                referencedTableName="issue_codes"
+                referencedColumnNames="code"
+                constraintName="fk_bid_issue_codes_issue_code" />
+    </changeSet>
+
+    <changeSet id="create-attachments" author="tkambarov">
+        <createTable tableName="attachments">
+            <column name="id" type="bigint">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="file_name" type="varchar(255)"/>
+            <column name="file_type" type="varchar(255)"/>
+            <column name="url" type="varchar(500)"/>
+            <column name="bid_id" type="bigint">
+                <constraints foreignKeyName="fk_attachments_bids" references="bids(id)" nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+</databaseChangeLog>

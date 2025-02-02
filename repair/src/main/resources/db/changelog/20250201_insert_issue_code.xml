@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+    <changeSet id="insert-issue-codes" author="tkambarov">
+        <insert tableName="issue_codes">
+            <column name="code" value="S001"/>
+            <column name="description" value="Обнаружен отказ двигателя"/>
+            <!--5 sec for tests-->
+            <column name="repair_time_in_hours" value="0.00139"/>
+        </insert>
+        <insert tableName="issue_codes">
+            <column name="code" value="G001"/>
+            <column name="description" value="Неисправность тормозной системы"/>
+            <!--5 sec for tests-->
+            <column name="repair_time_in_hours" value="0.00139"/>
+        </insert>
+        <insert tableName="issue_codes">
+            <column name="code" value="T001"/>
+            <column name="description" value="Обнаружена проблема с передачей"/>
+            <!--5 sec for tests-->
+            <column name="repair_time_in_hours" value="0.00139"/>
+        </insert>
+    </changeSet>
+
+
+</databaseChangeLog>

@@ -1,0 +1,305 @@
+2025-02-02 07:07:58.937 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.2.Final - 
+2025-02-02 07:07:59.151 [main] INFO  com.sto.bid.BidApplication - Starting BidApplication v0.0.1-SNAPSHOT using Java 21.0.6 with PID 1 (/app/app.jar started by root in /app) - 
+2025-02-02 07:07:59.155 [main] INFO  com.sto.bid.BidApplication - The following 1 profile is active: "test" - 
+2025-02-02 07:08:01.296 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode. - 
+2025-02-02 07:08:01.540 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 217 ms. Found 4 JPA repository interfaces. - 
+2025-02-02 07:08:03.631 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8089 (http) - 
+2025-02-02 07:08:03.676 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8089"] - 
+2025-02-02 07:08:03.684 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat] - 
+2025-02-02 07:08:03.686 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.34] - 
+2025-02-02 07:08:03.815 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext - 
+2025-02-02 07:08:03.818 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 4496 ms - 
+2025-02-02 07:08:05.722 [main] INFO  liquibase.database - Set default schema name to public - 
+2025-02-02 07:08:06.949 [main] INFO  liquibase.changelog - Reading resource: db/changelog/20250131_init.xml - 
+2025-02-02 07:08:07.299 [main] INFO  liquibase.changelog - Reading from public.databasechangelog - 
+2025-02-02 07:08:07.523 [main] INFO  liquibase.ui - Database is up to date, no changesets to execute - 
+2025-02-02 07:08:07.536 [main] INFO  liquibase.changelog - Reading from public.databasechangelog - 
+2025-02-02 07:08:07.570 [main] INFO  liquibase.util - UPDATE SUMMARY - 
+2025-02-02 07:08:07.572 [main] INFO  liquibase.util - Run:                          0 - 
+2025-02-02 07:08:07.573 [main] INFO  liquibase.util - Previously run:               4 - 
+2025-02-02 07:08:07.575 [main] INFO  liquibase.util - Filtered out:                 0 - 
+2025-02-02 07:08:07.576 [main] INFO  liquibase.util - ------------------------------- - 
+2025-02-02 07:08:07.578 [main] INFO  liquibase.util - Total change sets:            4 - 
+2025-02-02 07:08:07.582 [main] INFO  liquibase.util - Update summary generated - 
+2025-02-02 07:08:07.586 [main] INFO  liquibase.command - Command execution complete - 
+2025-02-02 07:08:07.765 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting... - 
+2025-02-02 07:08:07.889 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@6eaa6b0c - 
+2025-02-02 07:08:07.902 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed. - 
+2025-02-02 07:08:08.085 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default] - 
+2025-02-02 07:08:08.280 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.5.Final - 
+2025-02-02 07:08:08.392 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled - 
+2025-02-02 07:08:08.998 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer - 
+2025-02-02 07:08:09.105 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default) - 
+2025-02-02 07:08:09.135 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 15.3
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown - 
+2025-02-02 07:08:11.604 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration) - 
+2025-02-02 07:08:11.611 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default' - 
+2025-02-02 07:08:12.780 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning - 
+2025-02-02 07:08:14.050 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8089"] - 
+2025-02-02 07:08:14.194 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8089 (http) with context path '/' - 
+2025-02-02 07:08:14.248 [main] INFO  com.sto.bid.BidApplication - Started BidApplication in 16.702 seconds (process running for 18.026) - 
+2025-02-02 07:09:07.396 [http-nio-8089-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet' - 
+2025-02-02 07:09:07.398 [http-nio-8089-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet' - 
+2025-02-02 07:09:07.402 [http-nio-8089-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 4 ms - 
+2025-02-02 07:09:07.450 [http-nio-8089-exec-1] INFO  com.sto.bid.config.LoggingFilter - Request[uri: /customers, content-type: application/json, method: POST, address: 192.168.0.1, query: null, body: {
+    "firstName": "Иван",
+    "lastName": "Петров",
+    "phone": "+7 912 345 67 92"
+}
+] - requestId=6a3beafe-a51e-475b-9ba8-71a01f80c147
+2025-02-02 07:09:08.243 [http-nio-8089-exec-1] INFO  com.sto.bid.config.LoggingFilter - Response[status: 200, body: {"status":"UNIQUE_ERROR","message":"Нарушение уникальности","data":null}] - requestId=6a3beafe-a51e-475b-9ba8-71a01f80c147
+2025-02-02 07:09:15.028 [http-nio-8089-exec-3] INFO  com.sto.bid.config.LoggingFilter - Request[uri: /bids, content-type: application/json, method: POST, address: 192.168.0.1, query: null, body: {
+  "customerId": 1,
+  "vehicleId": 1,
+  "complaint": "Двигатель троит, повышенный расход топлива.",
+  "attachments": [
+    {
+      "fileName": "engine_noise.mp4",
+      "fileType": "video/mp4",
+      "url": "https://sto.com/uploads/engine_noise.mp4"
+    }
+  ],
+  "preferredDate": "2025-02-01",
+  "notes": "Клиент просит перезвонить перед ремонтом"
+}
+] - requestId=4a6c3f6f-adf8-4651-ae34-b62e37e49c65
+2025-02-02 07:09:15.362 [http-nio-8089-exec-3] INFO  com.sto.bid.config.LoggingFilter - Response[status: 200, body: {"status":"SUCCESS","message":null,"data":{"bidId":2}}] - requestId=4a6c3f6f-adf8-4651-ae34-b62e37e49c65
+2025-02-02 07:09:26.526 [http-nio-8089-exec-4] INFO  com.sto.bid.config.LoggingFilter - Request[uri: /bids/7, content-type: null, method: GET, address: 192.168.0.1, query: null, body: ] - requestId=5759cae1-529f-475a-bf90-c568bc768641
+2025-02-02 07:09:26.544 [http-nio-8089-exec-4] INFO  com.sto.bid.config.LoggingFilter - Response[status: 200, body: {"status":"NOT_FOUND","message":"Сущность не найдена","data":null}] - requestId=5759cae1-529f-475a-bf90-c568bc768641
+2025-02-02 07:09:59.286 [http-nio-8089-exec-5] INFO  com.sto.bid.config.LoggingFilter - Request[uri: /bids/1, content-type: null, method: GET, address: 192.168.0.1, query: null, body: ] - requestId=f2e55650-cb11-4b47-a82f-3cc0e530750b
+2025-02-02 07:09:59.324 [http-nio-8089-exec-5] INFO  com.sto.bid.config.LoggingFilter - Response[status: 200, body: {"status":"SUCCESS","message":null,"data":{"id":1,"customer":{"id":1,"firstName":"Иван","lastName":"Петров","middleName":null,"phone":"+79123456792"},"vehicle":{"id":1,"make":"Toyota","model":"Camry","year":2020,"vin":"JTMZF33V70D123456","mileage":85000,"licensePlate":"А123ВЕ 77","engineType":"JTMZF33V70D123456"},"complaint":"Двигатель троит, повышенный расход топлива.","preferredDt":"2025-02-01","createdDt":"2025-02-02T06:54:14.404565","attachments":[{"id":1,"fileName":"engine_noise.mp4","fileType":"video/mp4","url":"https://sto.com/uploads/engine_noise.mp4"}],"notes":"Клиент просит перезвонить перед ремонтом"}}] - requestId=f2e55650-cb11-4b47-a82f-3cc0e530750b
+2025-02-02 07:12:11.223 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete - 
+2025-02-02 07:12:11.227 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete - 
+2025-02-02 07:12:11.235 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default' - 
+2025-02-02 07:12:11.239 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated... - 
+2025-02-02 07:12:11.244 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed. - 
+2025-02-02 07:12:14.568 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.2.Final - 
+2025-02-02 07:12:14.685 [main] INFO  com.sto.bid.BidApplication - Starting BidApplication v0.0.1-SNAPSHOT using Java 21.0.6 with PID 1 (/app/app.jar started by root in /app) - 
+2025-02-02 07:12:14.688 [main] INFO  com.sto.bid.BidApplication - The following 1 profile is active: "test" - 
+2025-02-02 07:12:16.079 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode. - 
+2025-02-02 07:12:16.202 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 106 ms. Found 4 JPA repository interfaces. - 
+2025-02-02 07:12:17.343 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8089 (http) - 
+2025-02-02 07:12:17.374 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8089"] - 
+2025-02-02 07:12:17.379 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat] - 
+2025-02-02 07:12:17.381 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.34] - 
+2025-02-02 07:12:17.462 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext - 
+2025-02-02 07:12:17.463 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2678 ms - 
+2025-02-02 07:12:18.303 [main] INFO  liquibase.database - Set default schema name to public - 
+2025-02-02 07:12:19.016 [main] INFO  liquibase.changelog - Reading resource: db/changelog/20250131_init.xml - 
+2025-02-02 07:12:19.209 [main] INFO  liquibase.changelog - Reading from public.databasechangelog - 
+2025-02-02 07:12:19.337 [main] INFO  liquibase.ui - Database is up to date, no changesets to execute - 
+2025-02-02 07:12:19.342 [main] INFO  liquibase.changelog - Reading from public.databasechangelog - 
+2025-02-02 07:12:19.360 [main] INFO  liquibase.util - UPDATE SUMMARY - 
+2025-02-02 07:12:19.362 [main] INFO  liquibase.util - Run:                          0 - 
+2025-02-02 07:12:19.363 [main] INFO  liquibase.util - Previously run:               4 - 
+2025-02-02 07:12:19.364 [main] INFO  liquibase.util - Filtered out:                 0 - 
+2025-02-02 07:12:19.365 [main] INFO  liquibase.util - ------------------------------- - 
+2025-02-02 07:12:19.366 [main] INFO  liquibase.util - Total change sets:            4 - 
+2025-02-02 07:12:19.368 [main] INFO  liquibase.util - Update summary generated - 
+2025-02-02 07:12:19.370 [main] INFO  liquibase.command - Command execution complete - 
+2025-02-02 07:12:19.480 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting... - 
+2025-02-02 07:12:19.522 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@4b343b6d - 
+2025-02-02 07:12:19.527 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed. - 
+2025-02-02 07:12:19.614 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default] - 
+2025-02-02 07:12:19.736 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.5.Final - 
+2025-02-02 07:12:19.792 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled - 
+2025-02-02 07:12:20.193 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer - 
+2025-02-02 07:12:20.274 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default) - 
+2025-02-02 07:12:20.296 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 15.3
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown - 
+2025-02-02 07:12:21.996 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration) - 
+2025-02-02 07:12:22.002 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default' - 
+2025-02-02 07:12:22.887 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning - 
+2025-02-02 07:12:23.558 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8089"] - 
+2025-02-02 07:12:23.600 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8089 (http) with context path '/' - 
+2025-02-02 07:12:23.629 [main] INFO  com.sto.bid.BidApplication - Started BidApplication in 9.935 seconds (process running for 10.898) - 
+2025-02-02 07:15:38.549 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete - 
+2025-02-02 07:15:38.558 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete - 
+2025-02-02 07:15:38.569 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default' - 
+2025-02-02 07:15:38.576 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated... - 
+2025-02-02 07:15:38.582 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed. - 
+2025-02-02 07:15:42.475 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.2.Final - 
+2025-02-02 07:15:42.601 [main] INFO  com.sto.bid.BidApplication - Starting BidApplication v0.0.1-SNAPSHOT using Java 21.0.6 with PID 1 (/app/app.jar started by root in /app) - 
+2025-02-02 07:15:42.603 [main] INFO  com.sto.bid.BidApplication - The following 1 profile is active: "test" - 
+2025-02-02 07:15:43.741 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode. - 
+2025-02-02 07:15:43.861 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 105 ms. Found 4 JPA repository interfaces. - 
+2025-02-02 07:15:44.874 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8089 (http) - 
+2025-02-02 07:15:44.901 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8089"] - 
+2025-02-02 07:15:44.909 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat] - 
+2025-02-02 07:15:44.912 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.34] - 
+2025-02-02 07:15:44.977 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext - 
+2025-02-02 07:15:44.978 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2288 ms - 
+2025-02-02 07:15:45.791 [main] INFO  liquibase.database - Set default schema name to public - 
+2025-02-02 07:15:46.483 [main] INFO  liquibase.changelog - Reading resource: db/changelog/20250131_init.xml - 
+2025-02-02 07:15:46.661 [main] INFO  liquibase.changelog - Reading from public.databasechangelog - 
+2025-02-02 07:15:46.757 [main] INFO  liquibase.ui - Database is up to date, no changesets to execute - 
+2025-02-02 07:15:46.762 [main] INFO  liquibase.changelog - Reading from public.databasechangelog - 
+2025-02-02 07:15:46.779 [main] INFO  liquibase.util - UPDATE SUMMARY - 
+2025-02-02 07:15:46.781 [main] INFO  liquibase.util - Run:                          0 - 
+2025-02-02 07:15:46.781 [main] INFO  liquibase.util - Previously run:               4 - 
+2025-02-02 07:15:46.782 [main] INFO  liquibase.util - Filtered out:                 0 - 
+2025-02-02 07:15:46.784 [main] INFO  liquibase.util - ------------------------------- - 
+2025-02-02 07:15:46.785 [main] INFO  liquibase.util - Total change sets:            4 - 
+2025-02-02 07:15:46.790 [main] INFO  liquibase.util - Update summary generated - 
+2025-02-02 07:15:46.792 [main] INFO  liquibase.command - Command execution complete - 
+2025-02-02 07:15:46.875 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting... - 
+2025-02-02 07:15:46.923 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@4756e5cc - 
+2025-02-02 07:15:46.927 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed. - 
+2025-02-02 07:15:47.018 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default] - 
+2025-02-02 07:15:47.111 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.5.Final - 
+2025-02-02 07:15:47.159 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled - 
+2025-02-02 07:15:47.545 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer - 
+2025-02-02 07:15:47.622 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default) - 
+2025-02-02 07:15:47.651 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 15.3
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown - 
+2025-02-02 07:15:49.063 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration) - 
+2025-02-02 07:15:49.069 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default' - 
+2025-02-02 07:15:49.846 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning - 
+2025-02-02 07:15:50.509 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8089"] - 
+2025-02-02 07:15:50.535 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8089 (http) with context path '/' - 
+2025-02-02 07:15:50.562 [main] INFO  com.sto.bid.BidApplication - Started BidApplication in 9.101 seconds (process running for 10.16) - 
+2025-02-02 07:15:55.456 [http-nio-8089-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet' - 
+2025-02-02 07:15:55.458 [http-nio-8089-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet' - 
+2025-02-02 07:15:55.464 [http-nio-8089-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 4 ms - 
+2025-02-02 07:15:55.521 [http-nio-8089-exec-1] INFO  com.sto.bid.config.LoggingFilter - Request[uri: /bids/1, content-type: null, method: GET, address: 192.168.0.1, query: null, body: ] - requestId=77a63440-93f8-4faa-80ef-5add45279e4c
+2025-02-02 07:15:56.163 [http-nio-8089-exec-1] INFO  com.sto.bid.config.LoggingFilter - Response[status: 200, body: {"status":"SUCCESS","message":null,"data":{"id":1,"customer":{"id":1,"firstName":"Иван","lastName":"Петров","middleName":null,"phone":"+79123456792"},"vehicle":{"id":1,"make":"Toyota","model":"Camry","year":2020,"vin":"JTMZF33V70D123456","mileage":85000,"licensePlate":"А123ВЕ 77","engineType":"JTMZF33V70D123456"},"complaint":"Двигатель троит, повышенный расход топлива.","sentForRepair":false,"preferredDt":"2025-02-01","createdDt":"2025-02-02T06:54:14.404565","attachments":[{"id":1,"fileName":"engine_noise.mp4","fileType":"video/mp4","url":"https://sto.com/uploads/engine_noise.mp4"}],"notes":"Клиент просит перезвонить перед ремонтом"}}] - requestId=77a63440-93f8-4faa-80ef-5add45279e4c
+2025-02-02 07:16:09.888 [http-nio-8089-exec-3] INFO  com.sto.bid.config.LoggingFilter - Request[uri: /bids/2/process, content-type: null, method: POST, address: 192.168.0.1, query: null, body: ] - requestId=f6d71e7d-6f63-4fff-994f-5d40bf3090bf
+2025-02-02 07:16:10.085 [http-nio-8089-exec-3] INFO  o.a.k.c.t.i.KafkaMetricsCollector - initializing Kafka metrics collector - requestId=f6d71e7d-6f63-4fff-994f-5d40bf3090bf
+2025-02-02 07:16:10.361 [http-nio-8089-exec-3] INFO  o.a.k.clients.producer.KafkaProducer - [Producer clientId=bid-producer-1] Instantiated an idempotent producer. - requestId=f6d71e7d-6f63-4fff-994f-5d40bf3090bf
+2025-02-02 07:16:10.494 [http-nio-8089-exec-3] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka version: 3.8.1 - requestId=f6d71e7d-6f63-4fff-994f-5d40bf3090bf
+2025-02-02 07:16:10.496 [http-nio-8089-exec-3] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka commitId: 70d6ff42debf7e17 - requestId=f6d71e7d-6f63-4fff-994f-5d40bf3090bf
+2025-02-02 07:16:10.498 [http-nio-8089-exec-3] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1738480570490 - requestId=f6d71e7d-6f63-4fff-994f-5d40bf3090bf
+2025-02-02 07:16:11.350 [kafka-producer-network-thread | bid-producer-1] INFO  org.apache.kafka.clients.Metadata - [Producer clientId=bid-producer-1] Cluster ID: 2gCvcXcXTaWTcpFY1ZSCDw - 
+2025-02-02 07:16:11.394 [http-nio-8089-exec-3] INFO  com.sto.bid.service.KafkaProducer - Bid message send successfully - requestId=f6d71e7d-6f63-4fff-994f-5d40bf3090bf
+2025-02-02 07:16:11.395 [http-nio-8089-exec-3] INFO  c.s.bid.service.impl.BidServiceImpl - Bid message sending for bidId 2 - requestId=f6d71e7d-6f63-4fff-994f-5d40bf3090bf
+2025-02-02 07:16:11.472 [kafka-producer-network-thread | bid-producer-1] INFO  o.a.k.c.p.i.TransactionManager - [Producer clientId=bid-producer-1] ProducerId set to 0 with epoch 0 - 
+2025-02-02 07:16:11.502 [http-nio-8089-exec-3] INFO  com.sto.bid.config.LoggingFilter - Response[status: 200, body: {"status":"SUCCESS","message":null,"data":null}] - requestId=f6d71e7d-6f63-4fff-994f-5d40bf3090bf
+2025-02-02 07:17:04.207 [http-nio-8089-exec-4] INFO  com.sto.bid.config.LoggingFilter - Request[uri: /customers, content-type: application/json, method: POST, address: 192.168.0.1, query: null, body: {
+    "firstName": "Иван",
+    "lastName": "Петров",
+    "phone": "+7 912 345 67 92"
+}
+] - requestId=31fb81ea-8dcb-4192-8aaf-d5318e49c2a3
+2025-02-02 07:17:04.591 [http-nio-8089-exec-4] INFO  com.sto.bid.config.LoggingFilter - Response[status: 200, body: {"status":"UNIQUE_ERROR","message":"Нарушение уникальности","data":null}] - requestId=31fb81ea-8dcb-4192-8aaf-d5318e49c2a3
+2025-02-02 07:17:09.444 [http-nio-8089-exec-5] INFO  com.sto.bid.config.LoggingFilter - Request[uri: /customers, content-type: application/json, method: POST, address: 192.168.0.1, query: null, body: {
+    "firstName": "Иван",
+    "lastName": "Петров",
+    "phone": "+7 912 345 67 93"
+}
+] - requestId=9374ada2-0e51-43a3-be6d-13ca08ebad37
+2025-02-02 07:17:09.501 [http-nio-8089-exec-5] INFO  com.sto.bid.config.LoggingFilter - Response[status: 200, body: {"status":"SUCCESS","message":null,"data":{"customerId":2}}] - requestId=9374ada2-0e51-43a3-be6d-13ca08ebad37
+2025-02-02 07:25:11.541 [kafka-producer-network-thread | bid-producer-1] INFO  o.apache.kafka.clients.NetworkClient - [Producer clientId=bid-producer-1] Node -1 disconnected. - 
+2025-02-02 07:32:52.001 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete - 
+2025-02-02 07:32:52.024 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete - 
+2025-02-02 07:32:52.044 [SpringApplicationShutdownHook] INFO  o.a.k.clients.producer.KafkaProducer - [Producer clientId=bid-producer-1] Closing the Kafka producer with timeoutMillis = 30000 ms. - 
+2025-02-02 07:32:52.080 [SpringApplicationShutdownHook] INFO  o.a.kafka.common.metrics.Metrics - Metrics scheduler closed - 
+2025-02-02 07:32:52.082 [SpringApplicationShutdownHook] INFO  o.a.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter - 
+2025-02-02 07:32:52.083 [SpringApplicationShutdownHook] INFO  o.a.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.telemetry.internals.ClientTelemetryReporter - 
+2025-02-02 07:32:52.083 [SpringApplicationShutdownHook] INFO  o.a.kafka.common.metrics.Metrics - Metrics reporters closed - 
+2025-02-02 07:32:52.087 [SpringApplicationShutdownHook] INFO  o.a.kafka.common.utils.AppInfoParser - App info kafka.producer for bid-producer-1 unregistered - 
+2025-02-02 07:32:52.101 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default' - 
+2025-02-02 07:32:52.130 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated... - 
+2025-02-02 07:32:52.149 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed. - 
+2025-02-02 07:35:02.259 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.2.Final - 
+2025-02-02 07:35:02.417 [main] INFO  com.sto.bid.BidApplication - Starting BidApplication v0.0.1-SNAPSHOT using Java 21.0.6 with PID 1 (/app/app.jar started by root in /app) - 
+2025-02-02 07:35:02.420 [main] INFO  com.sto.bid.BidApplication - The following 1 profile is active: "test" - 
+2025-02-02 07:35:04.381 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode. - 
+2025-02-02 07:35:04.578 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 173 ms. Found 4 JPA repository interfaces. - 
+2025-02-02 07:35:06.316 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8089 (http) - 
+2025-02-02 07:35:06.354 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8089"] - 
+2025-02-02 07:35:06.366 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat] - 
+2025-02-02 07:35:06.368 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.34] - 
+2025-02-02 07:35:06.476 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext - 
+2025-02-02 07:35:06.478 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3947 ms - 
+2025-02-02 07:35:07.967 [main] INFO  liquibase.database - Set default schema name to public - 
+2025-02-02 07:35:08.919 [main] INFO  liquibase.changelog - Reading resource: db/changelog/20250131_init.xml - 
+2025-02-02 07:35:09.121 [main] INFO  liquibase.changelog - Reading from public.databasechangelog - 
+2025-02-02 07:35:09.241 [main] INFO  liquibase.ui - Database is up to date, no changesets to execute - 
+2025-02-02 07:35:09.247 [main] INFO  liquibase.changelog - Reading from public.databasechangelog - 
+2025-02-02 07:35:09.267 [main] INFO  liquibase.util - UPDATE SUMMARY - 
+2025-02-02 07:35:09.268 [main] INFO  liquibase.util - Run:                          0 - 
+2025-02-02 07:35:09.270 [main] INFO  liquibase.util - Previously run:               4 - 
+2025-02-02 07:35:09.271 [main] INFO  liquibase.util - Filtered out:                 0 - 
+2025-02-02 07:35:09.271 [main] INFO  liquibase.util - ------------------------------- - 
+2025-02-02 07:35:09.273 [main] INFO  liquibase.util - Total change sets:            4 - 
+2025-02-02 07:35:09.276 [main] INFO  liquibase.util - Update summary generated - 
+2025-02-02 07:35:09.280 [main] INFO  liquibase.command - Command execution complete - 
+2025-02-02 07:35:09.372 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting... - 
+2025-02-02 07:35:09.419 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@40a8a26f - 
+2025-02-02 07:35:09.423 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed. - 
+2025-02-02 07:35:09.516 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default] - 
+2025-02-02 07:35:09.623 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.5.Final - 
+2025-02-02 07:35:09.697 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled - 
+2025-02-02 07:35:10.109 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer - 
+2025-02-02 07:35:10.203 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default) - 
+2025-02-02 07:35:10.235 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 15.3
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown - 
+2025-02-02 07:35:12.966 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration) - 
+2025-02-02 07:35:12.976 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default' - 
+2025-02-02 07:35:14.221 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning - 
+2025-02-02 07:35:15.256 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8089"] - 
+2025-02-02 07:35:15.290 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8089 (http) with context path '/' - 
+2025-02-02 07:35:15.319 [main] INFO  com.sto.bid.BidApplication - Started BidApplication in 14.359 seconds (process running for 16.011) - 
+2025-02-02 07:36:30.958 [http-nio-8089-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet' - 
+2025-02-02 07:36:30.961 [http-nio-8089-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet' - 
+2025-02-02 07:36:30.966 [http-nio-8089-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms - 
+2025-02-02 07:36:32.408 [http-nio-8089-exec-10] INFO  o.s.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 596 ms - 
+2025-02-02 07:44:00.929 [http-nio-8089-exec-10] INFO  com.sto.bid.config.LoggingFilter - Request[uri: /vehicles, content-type: application/json, method: POST, address: 192.168.0.1, query: null, body: {
+  "make": "string",
+  "model": "string",
+  "year": 0,
+  "vin": "string",
+  "mileage": 0,
+  "licensePlate": "string",
+  "engineType": "string"
+}] - requestId=2052dbd3-badd-40bd-8f59-cbc5413e3fe6
+2025-02-02 07:44:01.391 [http-nio-8089-exec-10] INFO  com.sto.bid.config.LoggingFilter - Response[status: 200, body: {"status":"SUCCESS","message":null,"data":{"vehicleId":2}}] - requestId=2052dbd3-badd-40bd-8f59-cbc5413e3fe6
+2025-02-02 07:44:06.303 [http-nio-8089-exec-3] INFO  com.sto.bid.config.LoggingFilter - Request[uri: /vehicles, content-type: application/json, method: POST, address: 192.168.0.1, query: null, body: {
+  "make": "string",
+  "model": "string",
+  "year": 0,
+  "vin": "string",
+  "mileage": 0,
+  "licensePlate": "string",
+  "engineType": "string"
+}] - requestId=81f644af-cdee-43ba-a108-5877d216c9a6
+2025-02-02 07:44:06.326 [http-nio-8089-exec-3] INFO  com.sto.bid.config.LoggingFilter - Response[status: 200, body: {"status":"UNIQUE_ERROR","message":"Нарушение уникальности","data":null}] - requestId=81f644af-cdee-43ba-a108-5877d216c9a6
+2025-02-02 07:44:16.080 [http-nio-8089-exec-2] INFO  com.sto.bid.config.LoggingFilter - Request[uri: /vehicles, content-type: application/json, method: POST, address: 192.168.0.1, query: null, body: {
+  "make": "string",
+  "model": "string",
+  "year": 0,
+  "vin": "string",
+  "mileage": 0,
+  "licensePlate": "string1",
+  "engineType": "string"
+}] - requestId=3854abf7-fc61-458d-b36e-95e89de980d6
+2025-02-02 07:44:16.098 [http-nio-8089-exec-2] INFO  com.sto.bid.config.LoggingFilter - Response[status: 200, body: {"status":"SUCCESS","message":null,"data":{"vehicleId":3}}] - requestId=3854abf7-fc61-458d-b36e-95e89de980d6
+2025-02-02 07:48:33.448 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete - 
+2025-02-02 07:48:33.455 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete - 
+2025-02-02 07:48:33.476 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default' - 
+2025-02-02 07:48:33.491 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated... - 
+2025-02-02 07:48:33.499 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed. - 
