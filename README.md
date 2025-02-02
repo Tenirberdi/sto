@@ -1,6 +1,6 @@
 # Getting started
 
-To start all service run command `docker-compose -up --build`
+To start all services run command `docker-compose up --build`
 
 swagger routes:
 
