@@ -16,6 +16,7 @@ import lombok.Setter;
 
 import java.math.BigDecimal;
 import java.util.List;
+import java.util.Set;
 
 @Entity
 @Table(name = "issue_codes")
@@ -36,5 +37,5 @@ public class IssueCodeEntity {
     @Column(name = "price", nullable = false)
     private BigDecimal price;
     @ManyToMany(mappedBy = "issueCodes")
-    private List<BidEntity> bids;
+    private Set<BidEntity> bids;
 }

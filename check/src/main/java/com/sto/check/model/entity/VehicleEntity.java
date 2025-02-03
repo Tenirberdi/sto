@@ -33,6 +33,6 @@ public class VehicleEntity {
     private String licensePlate;
     @Column(name = "engine_type")
     private String engineType;
-    @OneToMany(mappedBy="vehicle", cascade={CascadeType.ALL})
+    @OneToMany(mappedBy="vehicle")
     private List<BidEntity> bids;
 }

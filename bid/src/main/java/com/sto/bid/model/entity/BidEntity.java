@@ -20,6 +20,7 @@ import lombok.Setter;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.List;
+import java.util.Set;
 
 @Entity
 @Table(name = "bids")
@@ -32,10 +33,10 @@ public class BidEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @ManyToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE}, fetch = FetchType.LAZY)
     @JoinColumn(name = "customer_id", nullable = false)
     private CustomerEntity customer;
-    @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @ManyToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE}, fetch = FetchType.LAZY)
     @JoinColumn(name = "vehicle_id", nullable = false)
     private VehicleEntity vehicle;
     @Column(name = "sent_for_repair")
@@ -47,6 +48,6 @@ public class BidEntity {
     @Column(name = "preferred_dt")
     private LocalDate preferredDt;
     private String notes;
-    @OneToMany(mappedBy = "bid", cascade={CascadeType.ALL}, fetch = FetchType.EAGER)
-    private List<AttachmentEntity> attachments;
+    @OneToMany(mappedBy = "bid", cascade={CascadeType.PERSIST, CascadeType.MERGE}, fetch = FetchType.LAZY)
+    private Set<AttachmentEntity> attachments;
 }

@@ -53,7 +53,7 @@ public class RepairServiceImpl implements RepairService {
             log.error("BidId {} not found in db", bidId);
             return;
         }
-        BidEntity bidEntity = bidRepository.findById(bidId).get();
+        BidEntity bidEntity = bidRepository.findWithAllById(bidId).get();
         Bid bid = BidMapper.entityToDto(bidEntity);
         kafkaProducer.sendMessage(bid);
     }
@@ -64,7 +64,7 @@ public class RepairServiceImpl implements RepairService {
             log.error("BidId {} not found", bidId);
             throw new EntityNotFoundException();
         }
-        return BidMapper.entityToDto(bidRepository.findById(bidId).get());
+        return BidMapper.entityToDto(bidRepository.findWithAllById(bidId).get());
     }
 
     private void findIssues(Bid vehicleData) {

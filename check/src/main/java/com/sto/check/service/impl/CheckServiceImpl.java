@@ -50,7 +50,7 @@ public class CheckServiceImpl implements CheckService {
             log.error("For bidId {} already formed check", bidId);
             throw new EntityNotFoundException();
         }
-        return BidMapper.entityToDto(bidRepository.findById(bidId).get());
+        return BidMapper.entityToDto(bidRepository.findWithAllById(bidId).get());
     }
 
     private void calculatePrice(Bid bid) {

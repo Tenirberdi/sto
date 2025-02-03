@@ -21,7 +21,7 @@ public class BidMapper {
                 .issueCodes(bid.getIssues()
                         .stream()
                         .map(IssueCodeMapper::dtoToEntity)
-                        .collect(Collectors.toList()))
+                        .collect(Collectors.toSet()))
                 .notes(bid.getNotes())
                 .repairFinishedDt(bid.getRepairFinishedDt()).build();
     }

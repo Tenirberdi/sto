@@ -22,7 +22,7 @@ public class BidMapper {
                 .issueCodes(bid.getIssues()
                         .stream()
                         .map(IssueCodeMapper::dtoToEntity)
-                        .collect(Collectors.toList()))
+                        .collect(Collectors.toSet()))
                 .totalPrice(bid.getTotalPrice())
                 .notes(bid.getNotes()).build();
     }

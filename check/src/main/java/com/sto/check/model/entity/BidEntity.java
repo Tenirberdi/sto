@@ -19,11 +19,12 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.hibernate.annotations.BatchSize;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
-import java.util.List;
+import java.util.Set;
 
 @Entity
 @Table(name = "bids")
@@ -35,10 +36,10 @@ import java.util.List;
 public class BidEntity {
     @Id
     private Long id;
-    @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @ManyToOne(cascade = {CascadeType.MERGE, CascadeType.PERSIST}, fetch = FetchType.LAZY)
     @JoinColumn(name = "customer_id", nullable = false)
     private CustomerEntity customer;
-    @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @ManyToOne(cascade = {CascadeType.MERGE, CascadeType.PERSIST}, fetch = FetchType.LAZY)
     @JoinColumn(name = "vehicle_id", nullable = false)
     private VehicleEntity vehicle;
     @Column(name = "status", nullable = false)
@@ -59,12 +60,12 @@ public class BidEntity {
     private String notes;
     @Column(name = "total_price", nullable = false)
     private BigDecimal totalPrice;
-    @OneToMany(mappedBy = "bid", cascade={CascadeType.ALL}, fetch = FetchType.EAGER)
-    private List<AttachmentEntity> attachments;
-    @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "bid", fetch = FetchType.LAZY)
+    private Set<AttachmentEntity> attachments;
+    @ManyToMany(cascade = {CascadeType.MERGE, CascadeType.PERSIST}, fetch = FetchType.LAZY)
     @JoinTable(
             name = "bid_issue_codes",
             joinColumns = @JoinColumn(name = "bid_id"),
             inverseJoinColumns = @JoinColumn(name = "issue_code"))
-    private List<IssueCodeEntity> issueCodes;
+    private Set<IssueCodeEntity> issueCodes;
 }

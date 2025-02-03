@@ -4,6 +4,7 @@ import com.sto.repair.model.constant.RepairStatus;
 import com.sto.repair.model.entity.BidEntity;
 import com.sto.repair.model.entity.IssueCodeEntity;
 import com.sto.repair.repository.BidRepository;
+import com.sto.repair.repository.IssueCodeRepository;
 import com.sto.repair.service.ActiveMQProducer;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -12,6 +13,7 @@ import org.springframework.stereotype.Component;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.util.Random;
+import java.util.Set;
 
 @Slf4j
 @Component
@@ -32,7 +34,8 @@ public class WorkImitationUtil {
         bidRepository.save(bidEntity);
         //Imitation of work
         ////Adding or removing +- 2 seconds. Imitating that work completed earlier or later estimated time
-        Long estimatedCompleteTimeInSec = bidEntity.getIssueCodes().stream()
+        Set<IssueCodeEntity> issues = bidRepository.findIssuesById(bidEntity.getId());
+        long estimatedCompleteTimeInSec = issues.stream()
                 .map(IssueCodeEntity::getRepairTimeInHours)
                 .reduce(BigDecimal.ZERO, BigDecimal::add)
                 .multiply(BigDecimal.valueOf(60))

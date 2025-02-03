@@ -37,6 +37,6 @@ public class CustomerEntity {
     private String middleName;
     @Column(name = "phone", nullable = false, unique = true)
     private String phone;
-    @OneToMany(mappedBy="customer", cascade={CascadeType.ALL}, fetch = FetchType.LAZY)
+    @OneToMany(mappedBy="customer", fetch = FetchType.LAZY)
     private List<BidEntity> bids;
 }

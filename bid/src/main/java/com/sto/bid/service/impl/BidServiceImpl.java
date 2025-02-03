@@ -52,7 +52,7 @@ public class BidServiceImpl implements BidService {
 
     @Override
     public Bid get(Long bidId) {
-        BidEntity bidEntity = bidRepository.findById(bidId).orElseThrow(EntityNotFoundException::new);
+        BidEntity bidEntity = bidRepository.findWithAllById(bidId).orElseThrow(EntityNotFoundException::new);
         return BidMapper.entityToDto(bidEntity);
     }
 
