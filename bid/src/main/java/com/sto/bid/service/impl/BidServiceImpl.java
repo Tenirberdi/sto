@@ -59,8 +59,8 @@ public class BidServiceImpl implements BidService {
     @Override
     @Transactional
     public void process(Long bidId) {
-        BidEntity bidEntity = bidRepository.findById(bidId).orElseThrow(EntityNotFoundException::new);
-        kafkaProducer.sendMessage(get(bidId));
+        BidEntity bidEntity = bidRepository.findWithAllById(bidId).orElseThrow(EntityNotFoundException::new);
+        kafkaProducer.sendMessage(BidMapper.entityToDto(bidEntity));
         log.info("Bid message sending for bidId {}", bidId);
         bidEntity.setSentForRepair(true);
     }
