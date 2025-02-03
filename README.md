@@ -54,4 +54,4 @@ check-service - `http://localhost:8090/swagger-ui/index.html`
 
 [repair-service] to check status of repair use `/repair-status/bids/1`
 
-[check-service] to check for bid use `/checks/14`
+[check-service] to check for bid use `/checks/1`
